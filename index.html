@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة عمل تسويق - مداد رمضان</title>
+    
+    <!-- Google Fonts: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        ramadan: {
+                            dark: '#0f172a',
+                            purple: '#2e1065',
+                            gold: '#fbbf24',
+                            goldLight: '#fde68a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(251, 191, 36, 0.5);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 40px 0 rgba(251, 191, 36, 0.15);
+        }
+
+        /* Floating Animation for Decor */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-float-delayed {
+            animation: float 8s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        /* Glowing Text */
+        .text-glow {
+            text-shadow: 0 0 15px rgba(251, 191, 36, 0.5);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #fbbf24; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f59e0b; 
+        }
+        
+        .timeline-line {
+            position: absolute;
+            right: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, #fbbf24, transparent);
+            transform: translateX(50%);
+            z-index: 0;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-line {
+                right: 24px;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased relative min-h-screen selection:bg-ramadan-gold selection:text-ramadan-dark">
+
+    <!-- Background Decorative Elements -->
+    <div class="fixed top-10 right-10 text-ramadan-gold opacity-20 text-6xl animate-float z-0 pointer-events-none">
+        <i class="fa-solid fa-moon"></i>
+    </div>
+    <div class="fixed bottom-20 left-10 text-ramadan-gold opacity-20 text-5xl animate-float-delayed z-0 pointer-events-none">
+        <i class="fa-solid fa-star-and-crescent"></i>
+    </div>
+    <div class="fixed top-40 left-20 text-ramadan-gold opacity-10 text-4xl animate-float z-0 pointer-events-none" style="animation-duration: 7s;">
+        <i class="fa-solid fa-star"></i>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center text-center px-4 z-10 pt-20 pb-10">
+        <div class="max-w-4xl mx-auto" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="inline-block mb-6 px-6 py-2 rounded-full border border-ramadan-gold/30 bg-ramadan-gold/10 text-ramadan-gold text-sm font-bold tracking-wider backdrop-blur-md">
+                <i class="fa-solid fa-bolt mr-2 ml-2"></i> خطة الانطلاق الاستراتيجية
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                أمسيات <span class="text-transparent bg-clip-text bg-gradient-to-l from-ramadan-gold to-yellow-200 text-glow">مداد رمضان</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed font-light max-w-3xl mx-auto">
+                الهدف الأسمى: إدارة وتسويق الأمسيات عبر منصات التواصل الاجتماعي لضمان <span class="text-ramadan-gold font-bold">أعلى نسبة حضور وتفاعل</span>.
+            </p>
+            
+            <a href="#team-plan" class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-ramadan-dark bg-gradient-to-r from-ramadan-gold to-yellow-400 rounded-full hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(251,191,36,0.4)]">
+                <span>استعراض مهام الفريق</span>
+                <i class="fa-solid fa-arrow-down mr-3 group-hover:animate-bounce"></i>
+            </a>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-ramadan-gold/50">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </div>
+    </header>
+
+    <!-- Main Content: Timeline / Plan -->
+    <section id="team-plan" class="relative py-20 px-4 z-10">
+        <div class="max-w-6xl mx-auto relative">
+            
+            <!-- Section Title -->
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">هيكل <span class="text-ramadan-gold">المهام التنفيذية</span></h2>
+                <div class="w-24 h-1 bg-ramadan-gold mx-auto rounded-full shadow-[0_0_10px_rgba(251,191,36,0.8)]"></div>
+            </div>
+
+            <!-- Timeline Line -->
+            <div class="timeline-line hidden md:block"></div>
+
+            <!-- Team Member 1: Designer -->
+            <div class="relative flex flex-col md:flex-row items-center justify-between mb-24 w-full">
+                <!-- Mobile Timeline dot -->
+                <div class="absolute right-6 top-8 w-4 h-4 rounded-full bg-ramadan-gold md:hidden z-10 shadow-[0_0_10px_#fbbf24]"></div>
+                
+                <div class="w-full md:w-5/12 mb-8 md:mb-0" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="glass-card rounded-2xl p-8 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-2 h-full bg-gradient-to-b from-blue-400 to-blue-600"></div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 text-2xl border border-blue-500/30">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">محمود يسري</h3>
+                                <p class="text-blue-400">المصمم الإبداعي</p>
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-clock text-ramadan-gold mt-1"></i>
+                                <div>
+                                    <strong class="text-white">التواجد الفوري:</strong>
+                                    <p class="text-sm">على أهبة الاستعداد يومياً من 8:30 م إلى 9:30 م لتنفيذ التعديلات الفورية.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-layer-group text-ramadan-gold mt-1"></i>
+                                <div>
+                                    <strong class="text-white">قوالب احترافية (Templates):</strong>
+                                    <p class="text-sm">تجهيز قوالب لبداية ونهاية المحاضرة بأسماء واضحة (مثال: ستبدأ الآن محاضرة...).</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-bullseye text-ramadan-gold mt-1"></i>
+                                <div>
+                                    <strong class="text-white">تحفيز الدخول (CTA):</strong>
+                                    <p class="text-sm">تصميم قالب مخصص يحتوي على دعوة صريحة ومحفزة للدخول على رابط "زووم".</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-copyright text-ramadan-gold mt-1"></i>
+                                <div>
+                                    <strong class="text-white">هوية بصرية:</strong>
+                                    <p class="text-sm">التأكد من وضع شعار "فيجن" على كافة التصاميم قبل التسليم.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Center Icon -->
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-ramadan-dark border-2 border-ramadan-gold items-center justify-center text-ramadan-gold z-10 shadow-[0_0_15px_rgba(251,191,36,0.5)]">
+                    <i class="fa-solid fa-pen-nib"></i>
+                </div>
+
+                <div class="w-full md:w-5/12" data-aos="fade-right" data-aos-duration="1000">
+                    <!-- Empty space for desktop layout balance -->
+                </div>
+            </div>
+
+            <!-- Team Member 2: Content Creator -->
+            <div class="relative flex flex-col md:flex-row-reverse items-center justify-between mb-24 w-full">
+                <!-- Mobile Timeline dot -->
+                <div class="absolute right-6 top-8 w-4 h-4 rounded-full bg-ramadan-gold md:hidden z-10 shadow-[0_0_10px_#fbbf24]"></div>
+
+                <div class="w-full md:w-5/12 mb-8 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="glass-card rounded-2xl p-8 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-2 h-full bg-gradient-to-b from-green-400 to-emerald-600"></div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 text-2xl border border-green-500/30">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">مصطفى</h3>
+                                <p class="text-green-400">صانع المحتوى والنشر</p>
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-bolt text-ramadan-gold mt-1"></i>
+                                <div>
+                                    <strong class="text-white">النشر الفوري:</strong>
+                                    <p class="text-sm">استلام التصميم ورابط زووم ونشرهما فوراً على جميع المنصات والقنوات.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-eye text-ramadan-gold mt-1"></i>
+                                <div>
+                                    <strong class="text-white">المتابعة الحية:</strong>
+                                    <p class="text-sm">التواجد الفعلي داخل قاعة زووم لمتابعة سير الأمسية والتفاعل السريع.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-tower-broadcast text-ramadan-gold mt-1"></i>
+                                <div>
+                                    <strong class="text-white">إعادة البث (Restreaming):</strong>
+                                    <p class="text-sm">اختيار المحاضرات الناجحة وبثها (Live Stream) على فيسبوك، إنستجرام، ولينكد إن (منصة مختلفة يومياً).</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-rocket text-ramadan-gold mt-1"></i>
+                                <div>
+                                    <strong class="text-white">تنشيط البث (Boosting & Ranking):</strong>
+                                    <p class="text-sm">استخدام حسابات مجهزة للتفاعل (تعليقات، إعجابات، مشاركات) لرفع تصنيف البث ووصوله للجمهور.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Center Icon -->
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-ramadan-dark border-2 border-ramadan-gold items-center justify-center text-ramadan-gold z-10 shadow-[0_0_15px_rgba(251,191,36,0.5)]">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+
+                <div class="w-full md:w-5/12" data-aos="fade-left" data-aos-duration="1000">
+                     <!-- Empty space for desktop layout balance -->
+                </div>
+            </div>
+
+            <!-- Team Member 3: Marketing Manager -->
+            <div class="relative flex flex-col md:flex-row items-center justify-between w-full">
+                <!-- Mobile Timeline dot -->
+                <div class="absolute right-6 top-8 w-4 h-4 rounded-full bg-ramadan-gold md:hidden z-10 shadow-[0_0_10px_#fbbf24]"></div>
+
+                <div class="w-full md:w-5/12 mb-8 md:mb-0" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="glass-card rounded-2xl p-8 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-2 h-full bg-gradient-to-b from-purple-400 to-purple-600"></div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 text-2xl border border-purple-500/30">
+                                <i class="fa-solid fa-chess-king"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">عبد الرحمن</h3>
+                                <p class="text-purple-400">مدير التسويق (المايسترو)</p>
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-brands fa-youtube text-red-500 mt-1"></i>
+                                <div>
+                                    <strong class="text-white">إدارة يوتيوب:</strong>
+                                    <p class="text-sm">المسؤولية الكاملة عن إدارة وتنسيق البث المباشر على منصة يوتيوب.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-network-wired text-ramadan-gold mt-1"></i>
+                                <div>
+                                    <strong class="text-white">الإشراف العام والتنسيق:</strong>
+                                    <p class="text-sm">متابعة تنفيذ الخطة بين محمود ومصطفى، وحل أي عقبات لضمان خروج الأمسيات بأفضل شكل ممكن.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-trophy text-ramadan-gold mt-1"></i>
+                                <div>
+                                    <strong class="text-white">تحقيق الأهداف:</strong>
+                                    <p class="text-sm">التأكد من أن جميع الجهود تصب في تحقيق أهداف "مداد رمضان" الاستراتيجية.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Center Icon -->
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-ramadan-dark border-2 border-ramadan-gold items-center justify-center text-ramadan-gold z-10 shadow-[0_0_15px_rgba(251,191,36,0.5)]">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <div class="w-full md:w-5/12" data-aos="fade-right" data-aos-duration="1000">
+                    <!-- Empty space for desktop layout balance -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer / CTA -->
+    <footer class="relative py-12 border-t border-white/10 z-10 bg-black/20 backdrop-blur-sm mt-20" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/5 mb-6 border border-white/10">
+                <i class="fa-solid fa-handshake text-3xl text-ramadan-gold"></i>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">فريق واحد.. هدف واحد</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                نجاح أمسيات "مداد رمضان" يعتمد على التكامل والسرعة بين جميع أفراد الفريق. معاً نحو تحقيق أعلى مستويات التأثير.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Initialize AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                once: true, // whether animation should happen only once - while scrolling down
+                offset: 100, // offset (in px) from the original trigger point
+                easing: 'ease-out-cubic',
+            });
+        });
+    </script>
+</body>
+</html>
+
+
