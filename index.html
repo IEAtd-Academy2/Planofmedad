@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة تقارير حملة "مداد" رمضان - استقرار ونجاح</title>
+    <title>لوحة تقارير حملة "مداد" رمضان - التقرير الشامل</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Cairo -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -26,7 +26,7 @@
                             600: '#0d9488',
                             900: '#134e4a',
                         },
-                        ramadan: '#d4af37' // Gold accent
+                        ramadan: '#d4af37'
                     }
                 }
             }
@@ -40,28 +40,28 @@
             .print-shadow-none { box-shadow: none !important; border: 1px solid #e2e8f0; }
             .log-item { page-break-inside: avoid; }
         }
-        .pulse-border { animation: pulse-border 2s infinite; }
-        @keyframes pulse-border {
-            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
-        }
+        .timer-bg { background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 10px, transparent 10px, transparent 20px); }
+        .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #b58500 100%); }
     </style>
 </head>
 <body class="font-sans text-gray-800 antialiased p-4 md:p-8">
 
     <div class="max-w-6xl mx-auto space-y-6">
         
-        <!-- Pipeline Alert -->
-        <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl shadow-md p-4 flex items-center justify-between print-shadow-none">
-            <div class="flex items-center gap-4">
-                <div class="bg-white text-blue-600 w-12 h-12 rounded-full flex items-center justify-center text-2xl shadow-sm pulse-border">
-                    <i class="fa-solid fa-hourglass-half"></i>
+        <!-- URGENCY COUNTDOWN ALERT -->
+        <div class="bg-red-600 text-white rounded-xl shadow-lg p-5 flex flex-col md:flex-row items-center justify-between print-shadow-none timer-bg border-4 border-red-700">
+            <div class="flex items-center gap-4 mb-4 md:mb-0">
+                <div class="bg-white text-red-600 w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-sm">
+                    <i class="fa-solid fa-stopwatch text-red-600"></i>
                 </div>
                 <div>
-                    <h2 class="text-xl font-bold">فرص مبيعات وشيكة (Pipeline) 🎯</h2>
-                    <p class="text-sm opacity-90 font-medium">يوجد <strong>2 عملاء</strong> في مرحلة (منتظر الدفع). مطلوب متابعة فورية من المبيعات لإغلاق الصفقات.</p>
+                    <h2 class="text-2xl font-black uppercase tracking-wider drop-shadow-md">العد التنازلي للعرض! ⏳</h2>
+                    <p class="text-sm font-bold mt-1 bg-red-800 px-3 py-1 rounded inline-block">مرحلة الإغلاق النهائي وتفعيل (Retargeting)</p>
                 </div>
+            </div>
+            <div class="text-center bg-white/20 px-6 py-2 rounded-lg backdrop-blur-sm border border-white/30">
+                <span class="block text-xs font-bold uppercase mb-1">متبقي على الانتهاء</span>
+                <span class="text-4xl font-black tabular-nums tracking-widest">10 <span class="text-xl">أيام</span></span>
             </div>
         </div>
 
@@ -76,45 +76,42 @@
                     <span class="text-ramadan"><i class="fa-solid fa-lantern"></i></span> 
                     حملة "مداد" الرمضانية
                 </h1>
-                <p class="text-gray-500 font-semibold">تقرير الأداء الحي - السجل الشامل (التحديث السادس عشر)</p>
+                <p class="text-gray-500 font-semibold">التقرير الإداري الشامل (الإحصائيات، التقييم، والسجل الكامل)</p>
             </div>
             <div class="mt-4 md:mt-0 flex gap-3 no-print">
-                <button onclick="window.print()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-5 py-2.5 rounded-lg font-semibold transition flex items-center gap-2">
-                    <i class="fa-solid fa-print"></i> طباعة التقرير الشامل
+                <button onclick="window.print()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-5 py-2.5 rounded-lg font-bold transition flex items-center gap-2 border border-gray-200">
+                    <i class="fa-solid fa-print"></i> طباعة التقرير للإدارة
                 </button>
             </div>
         </header>
 
-        <!-- Strategy & Total Summary -->
-        <section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Current Performance Summary -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-white rounded-xl shadow-sm p-5 border-r-4 border-gray-800 print-shadow-none">
-                <h3 class="text-gray-500 text-sm font-bold mb-1">إجمالي الصرف (كلي)</h3>
-                <p class="text-2xl font-black text-gray-900">4,753 <span class="text-sm text-gray-500 font-bold">ج.م</span></p>
-                <p class="text-[10px] text-gray-400 mt-1">(2753 انستقرام + 2000 تيك توك)</p>
+                <h3 class="text-gray-500 text-sm font-bold mb-1">المنفق الفعلي حتى الآن</h3>
+                <p class="text-3xl font-black text-gray-900">4,753 <span class="text-sm text-gray-500 font-bold">ج.م</span></p>
+                <p class="text-[10px] text-gray-500 mt-1">2753 انستقرام + 2000 تيك توك</p>
             </div>
-             <div class="bg-white rounded-xl shadow-sm p-5 border-r-4 border-brand-500 print-shadow-none">
-                <h3 class="text-gray-500 text-sm font-bold mb-1">إجمالي الرصاص الفعال</h3>
-                <p class="text-3xl font-black text-brand-600">42 <span class="text-sm text-gray-500 font-bold">رسالة</span></p>
+             <div class="bg-white rounded-xl shadow-sm p-5 border-r-4 border-blue-500 print-shadow-none">
+                <h3 class="text-gray-500 text-sm font-bold mb-1">إجمالي الليدز (الرصاص)</h3>
+                <p class="text-3xl font-black text-blue-600">42 <span class="text-sm text-gray-500 font-bold">رسالة</span></p>
+                <p class="text-[10px] text-gray-500 mt-1">منصة انستقرام فقط</p>
             </div>
-            <div class="bg-gray-900 rounded-xl shadow-xl p-5 border-r-4 border-yellow-400 print-shadow-none md:col-span-2 relative overflow-hidden">
-                <div class="absolute -left-4 -top-4 opacity-10 text-yellow-400 text-7xl"><i class="fa-solid fa-chart-line"></i></div>
-                <h3 class="text-gray-300 text-sm font-bold mb-1">المبيعات المحققة (السابقة)</h3>
-                <div class="flex items-end gap-3">
-                    <p class="text-2xl font-black text-yellow-400">3,100 <span class="text-sm text-gray-400 font-bold">ريال</span></p>
-                    <p class="text-sm font-bold text-gray-400 mb-1 bg-gray-800 px-2 rounded">(~ 41,230 ج.م)</p>
-                    <p class="text-sm font-black text-white mb-1 ml-auto bg-blue-600 px-3 py-1 rounded shadow-sm">يوجد 2 عملاء قيد الدفع حالياً</p>
-                </div>
+             <div class="bg-white rounded-xl shadow-sm p-5 border-r-4 border-green-500 print-shadow-none">
+                <h3 class="text-gray-500 text-sm font-bold mb-1">المبيعات المحققة الفعالة</h3>
+                <p class="text-3xl font-black text-green-600">3 <span class="text-sm text-gray-500 font-bold">عملاء</span></p>
+                <p class="text-xs font-bold text-green-700 mt-1 bg-green-50 px-2 py-1 rounded inline-block">عائد 3,100 ريال (~41 ألف ج.م)</p>
             </div>
         </section>
 
-        <!-- Platforms Performance Grid -->
+        <!-- Platforms Performance Grid (RESTORED) -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             
             <!-- Instagram Card -->
             <div class="bg-white rounded-2xl shadow-sm overflow-hidden print-shadow-none border border-green-200">
                 <div class="bg-gradient-to-r from-pink-500 to-purple-500 p-4">
                     <h2 class="text-white text-xl font-bold flex items-center justify-between">
-                        <span class="flex items-center gap-2"><i class="fa-brands fa-instagram text-2xl"></i> أداء انستقرام (اكتساح مستمر)</span>
+                        <span class="flex items-center gap-2"><i class="fa-brands fa-instagram text-2xl"></i> إحصائيات انستقرام (النشط)</span>
                     </h2>
                 </div>
                 <div class="p-6">
@@ -124,29 +121,26 @@
                             <span class="block text-xl font-bold text-gray-900">2,753 ج</span>
                         </div>
                         <div class="bg-green-50 p-3 rounded-lg text-center border border-green-200">
-                            <span class="block text-green-700 text-[10px] mb-1">الرسائل <i class="fa-solid fa-arrow-up text-[10px]"></i></span>
+                            <span class="block text-green-700 text-[10px] mb-1">الرسائل</span>
                             <span class="block text-2xl font-bold text-green-700">42</span>
                         </div>
-                        <div class="bg-green-50 p-3 rounded-lg text-center border border-green-200 shadow-sm relative group">
-                            <span class="block text-green-700 text-[10px] mb-1">CPL <i class="fa-solid fa-arrow-down text-[10px]"></i></span>
+                        <div class="bg-green-50 p-3 rounded-lg text-center border border-green-200 shadow-sm relative">
+                            <span class="block text-green-700 text-[10px] mb-1">CPL (متوسط)</span>
                             <span class="block text-xl font-bold text-green-800">65.5 ج</span>
                         </div>
                     </div>
-                    
-                    <div class="space-y-4">
-                        <div class="bg-blue-50 border-r-4 border-blue-500 p-3 rounded text-sm text-gray-800">
-                            <h4 class="font-bold text-blue-900 border-b border-blue-200 pb-1 mb-2"><i class="fa-solid fa-chart-pie"></i> استقرار الخوارزمية (Scaling Success):</h4>
-                            <p class="text-xs">نجاح ممتاز في زيادة حجم الحملة (Scaling). برغم زيادة الصرف، انخفضت تكلفة الرسالة من 67.6 إلى 65.5 جنيه. الخوارزمية الآن مستقرة وتستهدف الفئة الصحيحة بكفاءة.</p>
-                        </div>
+                    <div class="bg-blue-50 border-r-4 border-blue-500 p-3 rounded text-sm text-gray-800">
+                        <h4 class="font-bold text-blue-900 border-b border-blue-200 pb-1 mb-2"><i class="fa-solid fa-chart-pie"></i> موقف المنصة:</h4>
+                        <p class="text-xs">نجاح ممتاز في زيادة حجم الحملة (Scaling). برغم زيادة الصرف وتعديل الإعلانات داخلياً، الخوارزمية الآن مستقرة وتستهدف الفئة الصحيحة بكفاءة ومعدل الإغلاق ممتاز (7%).</p>
                     </div>
                 </div>
             </div>
 
-            <!-- TikTok Card (Officially Dead) -->
-            <div class="bg-gray-100 rounded-2xl shadow-sm overflow-hidden print-shadow-none border border-gray-300 opacity-80">
+            <!-- TikTok Card (Dead) -->
+            <div class="bg-gray-100 rounded-2xl shadow-sm overflow-hidden print-shadow-none border border-gray-300 opacity-90">
                 <div class="bg-gray-800 p-4 relative z-0">
                     <h2 class="text-white text-xl font-bold flex items-center justify-between">
-                        <span class="flex items-center gap-2"><i class="fa-brands fa-tiktok text-2xl"></i> أرشيف تيك توك</span>
+                        <span class="flex items-center gap-2"><i class="fa-brands fa-tiktok text-2xl"></i> إحصائيات تيك توك (الأرشيف)</span>
                         <span class="bg-red-600 text-white font-bold text-xs px-2 py-1 rounded">مغلق نهائياً</span>
                     </h2>
                 </div>
@@ -162,99 +156,160 @@
                         </div>
                     </div>
                     
-                    <div class="bg-red-50 border-r-4 border-red-600 p-4 rounded text-sm text-gray-800 z-20 relative">
-                        <h4 class="font-bold text-red-900 border-b border-red-200 pb-1 mb-2"><i class="fa-solid fa-file-signature"></i> قرار الإغلاق (Post-Mortem):</h4>
-                        <ul class="list-disc list-inside text-xs text-gray-700 space-y-2 mt-2 font-semibold">
-                            <li>بناءً على المشاورات الفنية (تحليل أ. عبدالله)، تم التأكد أن "الكريتيف/الفيديو" غير مناسب لطبيعة المنصة.</li>
-                            <li>تم استنزاف 2000 ج.م دون أي تحويلات.</li>
-                            <li><span class="text-red-700">النتيجة:</span> طي صفحة تيك توك في هذه الحملة وتوجيه المجهود لانستقرام.</li>
-                        </ul>
+                    <div class="bg-red-50 border-r-4 border-red-600 p-3 rounded text-sm text-gray-800 z-20 relative">
+                        <h4 class="font-bold text-red-900 border-b border-red-200 pb-1 mb-2"><i class="fa-solid fa-file-signature"></i> سبب الإغلاق:</h4>
+                        <p class="text-xs">بناءً على المشاورات الفنية (استشارة أ. عبدالله)، تم التأكد أن الكريتيف غير مناسب لطبيعة المنصة بعد استنزاف الميزانية دون تحويلات. تم نقل الاهتمام والميزانية لانستقرام.</p>
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <!-- Action Log (Changelog) - FULL HISTORY -->
+        <!-- FORECASTING SECTION (Target vs Actual) -->
+        <div class="bg-gray-900 rounded-2xl shadow-xl overflow-hidden print-shadow-none border border-yellow-500 mb-6">
+            <div class="gold-gradient p-4 flex items-center gap-3">
+                <div class="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center text-white text-xl">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <h2 class="text-white text-xl font-bold">التقييم الاستراتيجي والتوقعات (الميزانية 60,000 ج.م)</h2>
+            </div>
+            <div class="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Actual vs Target Analysis -->
+                <div class="space-y-4">
+                    <!-- Progress Item 2: Sales Cost -->
+                    <div>
+                        <div class="flex justify-between text-xs font-bold mb-1 mt-3">
+                            <span class="text-gray-400">تكلفة اكتساب عميل دافع (CPA)</span>
+                            <span class="text-green-400">الفعلي: 1,333 ج.م | المخطط: 2,000 ج.م</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 66%"></div>
+                        </div>
+                        <p class="text-[10px] text-gray-500 mt-1">توضيح: نكتسب العميل الدافع بتكلفة أرخص بـ 33% من المخطط (نجاح مبهر).</p>
+                    </div>
+
+                    <!-- Progress Item 3: Conversion Rate -->
+                    <div>
+                        <div class="flex justify-between text-xs font-bold mb-1 mt-4">
+                            <span class="text-gray-400">معدل الإغلاق للمبيعات (Conversion)</span>
+                            <span class="text-brand-400">الفعلي: 7% | المخطط: 3%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2">
+                            <div class="bg-brand-500 h-2 rounded-full" style="width: 100%"></div>
+                        </div>
+                        <p class="text-[10px] text-gray-500 mt-1">توضيح: جودة العملاء (Quality) أعلى بكثير من المتوقع وتعوض نقص العدد الإجمالي.</p>
+                    </div>
+                </div>
+
+                 <!-- Conclusion Alert -->
+                 <div class="flex items-center">
+                    <div class="bg-green-900/40 border border-green-800 p-4 rounded-lg">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-wand-magic-sparkles text-green-400 mt-1"></i>
+                            <div>
+                                <h4 class="text-green-400 font-bold mb-1">التوقع النهائي لنهاية الميزانية:</h4>
+                                <p class="text-sm text-gray-300 leading-relaxed">
+                                    إذا استمر الأداء الحالي (الجودة تفوق الكمية)، فإن الحملة تتجه لتحقيق <strong>(~45 مبيعة)</strong> بدلاً من (30 مبيعة مستهدفة) بنهاية صرف الـ 60 ألف جنيه. تكلفة الرسالة (CPL) أعلى من المخطط، ولكن تكلفة المبيعة (CPA) أرخص بكثير!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+
+            </div>
+        </div>
+
+        <!-- Action Log (Changelog) - FULL 100% HISTORY -->
         <section class="bg-white rounded-2xl shadow-sm p-6 print-shadow-none">
             <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2 border-b pb-3">
-                <i class="fa-solid fa-clock-rotate-left text-brand-500"></i> السجل الزمني الكامل للقرارات والأحداث
+                <i class="fa-solid fa-book-open-reader text-brand-500"></i> السجل الزمني الكامل (من بداية الحملة حتى الآن)
             </h2>
             
             <div class="relative border-r-2 border-gray-200 pr-6 space-y-8">
                 
-                <!-- Log Item 16 (New - Finalizing Platforms) -->
+                <!-- Log Item 19 -->
                 <div class="relative log-item">
-                    <span class="absolute -right-[35px] top-1 bg-brand-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs border-4 border-white shadow-sm">
-                        <i class="fa-solid fa-check-double"></i>
-                    </span>
-                    <div class="bg-brand-50 rounded-lg p-4 border border-brand-200 shadow-lg">
+                    <span class="absolute -right-[35px] top-1 bg-gray-800 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs border-4 border-white shadow-sm">19</span>
+                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-300 shadow-sm">
                         <div class="flex justify-between items-start mb-2">
-                            <h4 class="font-black text-brand-900">إغلاق تيك توك نهائياً وتألق انستقرام</h4>
-                            <span class="text-xs font-bold bg-brand-200 text-brand-900 px-2 py-1 rounded whitespace-nowrap">الأحد - مساءً</span>
+                            <h4 class="font-black text-gray-900">التقييم الاستراتيجي: تجاوز مستهدف المبيعات</h4>
+                            <span class="text-xs font-bold bg-gray-200 text-gray-900 px-2 py-1 rounded">الأحد</span>
                         </div>
-                        <p class="text-sm text-gray-900 mb-2 font-semibold">
-                            تم اتخاذ القرار النهائي بإيقاف تيك توك بعد صرف 2,000 ج.م (0 ليدز) بناءً على تحليل الكريتيف. في المقابل، انستقرام يحقق أرقاماً ممتازة.
-                        </p>
-                        <ul class="text-sm text-gray-800 list-disc list-inside mt-2 font-bold">
-                            <li><span class="text-green-700">نجاح انستقرام:</span> وصول الرسائل لـ 42، مع انخفاض التكلفة إلى 65.56 ج.م.</li>
-                            <li><span class="text-blue-700">خط المبيعات:</span> وجود 2 عملاء في مرحلة (منتظر الدفع) جاري متابعتهم للإغلاق.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Log Item 15 (3000 Milestone) -->
-                <div class="relative log-item">
-                    <span class="absolute -right-[35px] top-1 bg-gray-800 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs border-4 border-white shadow-sm">
-                        <i class="fa-solid fa-flag-checkered"></i>
-                    </span>
-                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-300 shadow-sm opacity-90">
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="font-bold text-gray-900">محطة تقييم: تخطي حاجز الـ 3000 جنيه</h4>
-                            <span class="text-xs font-bold bg-gray-200 text-gray-900 px-2 py-1 rounded whitespace-nowrap">الجمعة - عصراً</span>
-                        </div>
-                        <p class="text-sm text-gray-700 mb-2">
-                            الوصول لإجمالي صرف 3,000 ج.م مقسمة (2000 انستقرام - 1000 تيك توك). انستقرام مستقر، وتيك توك تحت المراقبة القصوى.
+                        <p class="text-sm text-gray-800">
+                            مقارنة الميزانية الكلية (60 ألف). تكلفة المبيعة الحالية 1,333 ج.م (أرخص من المستهدف 2,000 ج.م). الحملة تتجه لتحقيق 45 مبيعة.
                         </p>
                     </div>
                 </div>
 
-                <!-- Log Item 14 (MASSIVE ROI) -->
+                <!-- Log Item 18 -->
                 <div class="relative log-item">
-                    <span class="absolute -right-[35px] top-1 bg-yellow-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs border-4 border-white shadow-sm">
-                        <i class="fa-solid fa-crown"></i>
-                    </span>
-                    <div class="bg-yellow-50 rounded-lg p-4 border border-yellow-400 shadow-sm opacity-90">
+                    <span class="absolute -right-[35px] top-1 bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs border-4 border-white shadow-sm">18</span>
+                    <div class="bg-blue-50 rounded-lg p-4 border border-blue-200 shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-blue-900">اعتماد خطة التوسع وإعادة الاستهداف (Retargeting)</h4>
+                            <span class="text-xs font-bold bg-blue-200 text-blue-900 px-2 py-1 rounded">الأحد</span>
+                        </div>
+                        <p class="text-sm text-gray-800">
+                            زيادة ميزانية انستقرام تدريجياً (20%) للحفاظ على التكلفة، وإطلاق حملة إعادة استهداف (Retargeting) للمترددين بعرض (10 أيام متبقية) لمنع تداخل الجمهور.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Log Item 17 -->
+                <div class="relative log-item">
+                    <span class="absolute -right-[35px] top-1 bg-red-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs border-4 border-white shadow-sm">17</span>
+                    <div class="bg-red-50 rounded-lg p-4 border border-red-200 shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-red-900">بدء العد التنازلي: تفعيل استراتيجية الـ FOMO</h4>
+                            <span class="text-xs font-bold bg-red-200 text-red-900 px-2 py-1 rounded">الأحد</span>
+                        </div>
+                        <p class="text-sm text-gray-800">
+                            تبقى 10 أيام فقط على العرض. توجيه فريق المبيعات لاستخدام التوقيت للضغط وإغلاق 2 عملاء قيد الدفع.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Log Item 16 -->
+                <div class="relative log-item">
+                    <span class="absolute -right-[35px] top-1 bg-gray-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs border-4 border-white shadow-sm">16</span>
+                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-200 shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-gray-900">إغلاق تيك توك نهائياً وتألق انستقرام</h4>
+                            <span class="text-xs font-bold bg-gray-200 text-gray-800 px-2 py-1 rounded">الأحد</span>
+                        </div>
+                        <p class="text-sm text-gray-700">
+                            إيقاف تيك توك بعد صرف 2,000 ج.م (0 ليدز). انستقرام يحقق 42 رسالة وانخفاض التكلفة إلى 65.56 ج.م.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Log Item 15 -->
+                <div class="relative log-item">
+                    <span class="absolute -right-[35px] top-1 bg-gray-800 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs border-4 border-white shadow-sm">15</span>
+                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-300 shadow-sm">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-bold text-gray-900">تخطي حاجز الـ 3000 جنيه صرف</h4>
+                            <span class="text-xs font-bold bg-gray-200 text-gray-900 px-2 py-1 rounded">الجمعة</span>
+                        </div>
+                        <p class="text-sm text-gray-700">الوصول لصرف 3,000 ج.م مقسمة (2000 انستقرام - 1000 تيك توك). انستقرام مستقر ومربح.</p>
+                    </div>
+                </div>
+
+                <!-- Log Item 14 -->
+                <div class="relative log-item">
+                    <span class="absolute -right-[35px] top-1 bg-yellow-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs border-4 border-white shadow-sm">14</span>
+                    <div class="bg-yellow-50 rounded-lg p-4 border border-yellow-400 shadow-sm">
                         <div class="flex justify-between items-start mb-2">
                             <h4 class="font-black text-yellow-900">اكتساح انستقرام بعائد 21 ضعف!</h4>
-                            <span class="text-xs font-bold bg-yellow-200 text-yellow-900 px-2 py-1 rounded whitespace-nowrap">الجمعة - ظهراً</span>
+                            <span class="text-xs font-bold bg-yellow-200 text-yellow-900 px-2 py-1 rounded">الجمعة</span>
                         </div>
-                        <p class="text-sm text-gray-800 mb-2 font-semibold">
-                            تأكيد 3 صفقات بقيمة (3,100 ريال سعودي) مقابل صرف 1,961 ج.م فقط.
+                        <p class="text-sm text-gray-800">
+                            تأكيد 3 صفقات بقيمة (3,100 ريال سعودي ~ 41,230 ج.م) مقابل صرف 1,961 ج.م فقط.
                         </p>
                     </div>
                 </div>
 
-                <!-- Older Logs Minimized -->
-                <div class="relative opacity-60 mt-4">
-                    <span class="absolute -right-[35px] top-1 bg-gray-400 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs border-4 border-white">
-                        <i class="fa-solid fa-history"></i>
-                    </span>
-                    <div class="bg-gray-50 rounded-lg p-4 text-sm text-gray-600">
-                        <p><strong><i class="fa-solid fa-calendar-days mr-1"></i> السجلات الأقدم محفوظة:</strong></p>
-                        <ul class="list-disc list-inside mt-2 space-y-1 text-xs">
-                            <li><strong>الخميس:</strong> تعديل إعلان انستقرام لتجنب التداخل (أدى لرفع CPL مؤقتاً).</li>
-                            <li><strong>الأربعاء:</strong> تحقيق أول مبيعة (200 ريال) + اكتشاف حظر تيك توك الخاطئ.</li>
-                            <li><strong>الإثنين:</strong> عودة الحملات وأزمة ردود الليل.</li>
-                            <li><strong>الجمعة السابقة:</strong> انطلاق الحملة واستهداف الـ iOS.</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </div>
-
-</body>
-</html>
+                <!-- Log Item 13 -->
+                <div class="relative log-item">
+                    <span class="absolute -right-[35px] top-1 bg-green-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs border-4 border-white shado
